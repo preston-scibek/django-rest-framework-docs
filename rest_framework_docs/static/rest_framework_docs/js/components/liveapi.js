@@ -43,9 +43,15 @@ var LiveAPIEndpoints = React.createClass({
       .set(headers)
       .send(data)
       .end(function (err, res) {
+        var requestJSON = {
+            method: res.req.method,
+            url: res.req.url,
+            headers: res.req.header,
+            data: res.req._data
+        }
         self.setState({
           response: res,
-          request: res.req
+          request: requestJSON,
         });
       });
   },
