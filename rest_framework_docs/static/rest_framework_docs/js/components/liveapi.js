@@ -47,6 +47,7 @@ var LiveAPIEndpoints = React.createClass({
   },
 
   render: function () {
+    var l_data = this.getData();
     return (
       <form className="form-horizontal" onSubmit={this.makeRequest}>
         <div className="modal-body">
@@ -55,7 +56,7 @@ var LiveAPIEndpoints = React.createClass({
               <Request endpoint={this.state.endpoint} ref='request' />
             </div>
             <div className="col-md-6 response">
-              <Response payload={this.state.request} />
+              <Response payload={l_data} />
               <Response payload={this.state.response} />
             </div>
           </div>
