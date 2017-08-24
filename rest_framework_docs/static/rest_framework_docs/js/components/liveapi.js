@@ -44,6 +44,8 @@ var LiveAPIEndpoints = React.createClass({
       .send(data)
       .end(function (err, res) {
         console.log(data);
+        console.log(this._data);
+        console.log(res.req);
         self.setState({
           response: res
         });
