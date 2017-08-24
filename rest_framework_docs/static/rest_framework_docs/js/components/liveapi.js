@@ -4,7 +4,7 @@ var APIRequest = require('superagent');
 var RequestUtils = require('../utils/request');
 var Request = require('./request');
 var Response = require('./response');
-var ViewRequest require('./view_request');
+var ViewRequest = require('./view_request');
 
 var LiveAPIEndpoints = React.createClass({
 
