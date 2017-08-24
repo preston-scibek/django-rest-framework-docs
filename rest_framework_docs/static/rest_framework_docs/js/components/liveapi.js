@@ -55,7 +55,7 @@ var LiveAPIEndpoints = React.createClass({
               <Request endpoint={this.state.endpoint} ref='request' />
             </div>
             <div className="col-md-6 response">
-              <Request payload={this.state.request} />
+              <Response payload={this.state.request} />
               <Response payload={this.state.response} />
             </div>
           </div>
