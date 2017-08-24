@@ -13,8 +13,7 @@ var Response = React.createClass({
 
   render: function () {
 
-    var requestJSON = JSONpp.prettyPrint(this.state.payload.body);
-
+    var requestJSON = JSONpp.prettyPrint(this.state.payload);
     return (
       <div>
         <h3>Request</h3>
