@@ -10,7 +10,8 @@ var LiveAPIEndpoints = React.createClass({
   getInitialState: function() {
     return {
       endpoint: this.props.endpoint,
-      response: null
+      response: null,
+      request: null
     };
   },
 
@@ -33,6 +34,7 @@ var LiveAPIEndpoints = React.createClass({
     };
 
     var data = this.getData();
+    self.setState({request: data});
 
     // Now Make the Request
     APIRequest(request.selectedMethod, request.endpoint.path)
@@ -54,7 +56,7 @@ var LiveAPIEndpoints = React.createClass({
               <Request endpoint={this.state.endpoint} ref='request' />
             </div>
             <div className="col-md-6 response">
-              <Response payload={this.getData} />
+              <Response payload={this.state.request} />
               <Response payload={this.state.response} />
             </div>
           </div>
