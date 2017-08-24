@@ -2,7 +2,7 @@ var React = require('react');
 
 var JSONpp = require('../utils/jsonpp');
 
-var Response = React.createClass({
+var ViewRequest = React.createClass({
 
   getInitialState: function () {
     return {
@@ -18,7 +18,7 @@ var Response = React.createClass({
       <div>
         <h3>Request</h3>
 
-        <pre><code dangerouslySetInnerHTML={{__html: responseJSON}}></code></pre>
+        <pre><code dangerouslySetInnerHTML={{__html: requestJSON}}></code></pre>
 
       </div>
     );
