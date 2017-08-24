@@ -40,13 +40,12 @@ var LiveAPIEndpoints = React.createClass({
       .send(data)
       .end(function (err, res) {
         self.setState({
-          response: data
+          response: res
         });
       });
   },
 
   render: function () {
-    var l_data = this.getData();
     return (
       <form className="form-horizontal" onSubmit={this.makeRequest}>
         <div className="modal-body">
@@ -69,3 +68,4 @@ var LiveAPIEndpoints = React.createClass({
 });
 
 module.exports = LiveAPIEndpoints;
+
