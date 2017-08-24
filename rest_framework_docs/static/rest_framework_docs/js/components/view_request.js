@@ -25,4 +25,4 @@ var ViewRequest = React.createClass({
   }
 });
 
-module.exports = Response;
+module.exports = ViewRequest;
