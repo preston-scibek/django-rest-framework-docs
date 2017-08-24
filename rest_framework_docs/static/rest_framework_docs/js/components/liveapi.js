@@ -35,6 +35,7 @@ var LiveAPIEndpoints = React.createClass({
     };
 
     var data = this.getData();
+    console.log(data);
     self.setState({request: data});
 
     // Now Make the Request

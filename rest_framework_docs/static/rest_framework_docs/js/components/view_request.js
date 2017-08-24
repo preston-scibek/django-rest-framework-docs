@@ -21,7 +21,7 @@ var ViewRequest = React.createClass({
     if (!this.state.payload) {
       return (
         <div>
-          <h3>Response</h3>
+          <h3>Request</h3>
           <p className='lead text-center'>Awaiting request...</p>
         </div>
       );
