@@ -39,7 +39,7 @@ var LiveAPIEndpoints = React.createClass({
     self.setState({request: data});
 
     // Now Make the Request
-    req = APIRequest(request.selectedMethod, request.endpoint.path)
+    var req = APIRequest(request.selectedMethod, request.endpoint.path)
       .set(headers)
       .send(data)
 
