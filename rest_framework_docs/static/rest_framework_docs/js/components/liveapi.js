@@ -4,6 +4,7 @@ var APIRequest = require('superagent');
 var RequestUtils = require('../utils/request');
 var Request = require('./request');
 var Response = require('./response');
+var ViewRequest request('./view_request');
 
 var LiveAPIEndpoints = React.createClass({
 
@@ -56,7 +57,7 @@ var LiveAPIEndpoints = React.createClass({
               <Request endpoint={this.state.endpoint} ref='request' />
             </div>
             <div className="col-md-6 response">
-              <Response payload={this.state.request} />
+              <ViewRequest payload={this.state.request} />
               <Response payload={this.state.response} />
             </div>
           </div>
